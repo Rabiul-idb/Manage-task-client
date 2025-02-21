@@ -44,5 +44,10 @@ This is a **MERN stack task management application** that allows users to **add,
 
 
 ---
+## 🚀 Live Demo  
+[Click here to view the live app](https://manage-task-defd3.web.app/)
 
+Thanks for visiting my app
 
+## Best Regards
+MD. Rabiul Islam
