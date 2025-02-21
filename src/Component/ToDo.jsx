@@ -1,6 +1,5 @@
 import axios from "axios";
-import { FaRegEdit } from "react-icons/fa";
-import { MdDeleteForever } from "react-icons/md";
+
 import Swal from "sweetalert2";
 import TaskList from "./TaskList";
 
@@ -20,9 +19,9 @@ const ToDo = () => {
             status: "todo",
         }
 
-        console.log(addToDo);
+       // console.log(addToDo);
 
-        axios.post(`http://localhost:5000/addTodoTask`, addToDo);
+        axios.post(`https://manage-task-server-five.vercel.app/addTodoTask`, addToDo);
         Swal.fire({
           title: "Success!",
           text: "Task Added",

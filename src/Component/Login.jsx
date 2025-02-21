@@ -43,7 +43,7 @@ const provider = new GoogleAuthProvider();
         }
 
         //console.log(userInfo)
-        axios.post(`http://localhost:5000/addUser/${user?.email}`, userInfo);
+        axios.post(`https://manage-task-server-five.vercel.app/addUser/${user?.email}`, userInfo);
         Swal.fire({
           title: "Success!",
           text: "Congrates! Successfully login",

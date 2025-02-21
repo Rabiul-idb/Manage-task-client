@@ -11,13 +11,7 @@ const Done = () => {
           placeholder="Add a task..."
         ></input>
         <button className="add-task-btn">Add Task</button>
-        <div className="item" draggable="true">
-          Example Task 3
-          <span className="icons">
-            <i className="fas fa-edit edit-btn" aria-label="Edit Task"></i>
-            <i className="fas fa-trash delete-btn" aria-label="Delete Task"></i>
-          </span>
-        </div>
+        
       </div>
     </div>
   );

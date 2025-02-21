@@ -5,7 +5,9 @@ import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // Replace with backend URL in production
+const socket = io("wss://manage-task-server-five.vercel.app", {
+    transports: ["websocket"]
+});
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
@@ -15,7 +17,7 @@ const TaskList = () => {
 
     const fetchTasks = async () => {
         try {
-          const response = await fetch("http://localhost:5000/allTask"); // Fetch existing tasks
+          const response = await fetch("https://manage-task-server-five.vercel.app/allTask"); // Fetch existing tasks
           const data = await response.json();
           setTasks(data); 
         } catch (error) {
@@ -58,9 +60,9 @@ const TaskList = () => {
   // delete a task
   
     const deleteTask = async (id) => {
-        
+
         try {
-          await axios.delete(`http://localhost:5000/deleteTask/${id}`);
+          await axios.delete(`https://manage-task-server-five.vercel.app/deleteTasks/${id}`);
       
           // Remove the deleted task from state
           setTasks(tasks.filter(task => task._id !== id));
