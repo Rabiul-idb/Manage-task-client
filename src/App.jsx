@@ -5,8 +5,8 @@ import ToDo from "./Component/ToDo";
 
 function App() {
   return (
-    <>
-      <main className="drag-container">
+    <div className="w-11/12 mx-auto">
+      <main className="drag-container w-full">
         <header>
           <h1 className="font-semibold text-2xl text-center ">Manage Task</h1>
         </header>
@@ -16,7 +16,7 @@ function App() {
           <Done></Done>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

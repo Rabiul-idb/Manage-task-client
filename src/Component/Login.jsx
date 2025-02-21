@@ -42,7 +42,7 @@ const provider = new GoogleAuthProvider();
           photo: user.photoURL,
         }
 
-        console.log(userInfo)
+        //console.log(userInfo)
         axios.post(`http://localhost:5000/addUser/${user?.email}`, userInfo);
         Swal.fire({
           title: "Success!",
