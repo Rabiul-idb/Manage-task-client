@@ -63,8 +63,8 @@ A simple task management application built with React and Firebase.
 
 ### **1️⃣ Clone the Repository**
 ```sh
-[git clone https://github.com/your-repo/task-manager.git](https://github.com/Rabiul-idb/Manage-task-client.git)
-cd task-manager
+git clone https://github.com/Rabiul-idb/Manage-task-client.git
+
 ```
 
 ### **2️⃣ Install Dependencies**
