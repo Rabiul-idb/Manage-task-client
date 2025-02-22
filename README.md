@@ -4,6 +4,10 @@
 This is a **MERN stack task management application** that allows users to **add, view, and delete tasks**. The backend is built with **Node.js, Express, MongoDB**, and **Change Streams**, while the frontend is built with **React.js**. WebSockets (`socket.io`) is used for **real-time task updates**.
 
 ---
+## 🚀 Live Demo  
+[Click here to view the live app](https://manage-task-defd3.web.app/)
+
+---
 
 ## 🚀 Features
 - **Add Tasks**: Users can add tasks with a title and status.
@@ -37,25 +41,12 @@ This is a **MERN stack task management application** that allows users to **add,
 
 ---
 
-# Manage Task App
-
-A simple task management application built with React and Firebase.
-
-## 🚀 Live Demo  
-[Click here to view the live app](https://manage-task-defd3.web.app/)
 
 ## 📌 Features  
 - Add, update, and delete tasks  
 - Drag and drop to reorder tasks  
 - Real-time updates  
 - User authentication  
-
-## 🛠️ Technologies Used  
-- React.js  
-- Firebase  
-- Node.js  
-- Express.js  
-- MongoDB  
 
 
 
@@ -85,9 +76,6 @@ npm start
 - Drag-and-drop task sorting
 
 
----
-## 🚀 Live Demo  
-[Click here to view the live app](https://manage-task-defd3.web.app/)
 
 Thanks for visiting my app
 
