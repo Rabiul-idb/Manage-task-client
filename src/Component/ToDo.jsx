@@ -21,7 +21,7 @@ const ToDo = () => {
 
        // console.log(addToDo);
 
-        axios.post(`https://manage-task-server-five.vercel.app/addTodoTask`, addToDo);
+        axios.post(`https://manage-task-server.onrender.com/addTodoTask`, addToDo);
         Swal.fire({
           title: "Success!",
           text: "Task Added",

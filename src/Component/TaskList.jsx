@@ -5,8 +5,9 @@ import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { io } from "socket.io-client";
 
-const socket = io("wss://manage-task-server-five.vercel.app", {
-    transports: ["websocket"]
+const socket = io("https://manage-task-server.onrender.com/", {
+    transports: ["websocket"],
+    reconnection: true,
 });
 
 const TaskList = () => {
@@ -17,7 +18,7 @@ const TaskList = () => {
 
     const fetchTasks = async () => {
         try {
-          const response = await fetch("https://manage-task-server-five.vercel.app/allTask"); // Fetch existing tasks
+          const response = await fetch("https://manage-task-server.onrender.com/allTask"); 
           const data = await response.json();
           setTasks(data); 
         } catch (error) {
@@ -61,17 +62,15 @@ const TaskList = () => {
   
     const deleteTask = async (id) => {
 
-        try {
-          await axios.delete(`https://manage-task-server-five.vercel.app/deleteTasks/${id}`);
+        
+          await axios.delete(`https://manage-task-server.onrender.com/delete/${id}`);
       
-          // Remove the deleted task from state
+         
           setTasks(tasks.filter(task => task._id !== id));
-        } catch (error) {
-          console.error("Error deleting task:", error);
-        }
+         
       };
 
-    // const remainingTask = tasks.filter(item => item._id === id);
+    // const remainingTask = tasks.filter(item => item._id === !id);
     // setTasks(remainingTask);
 
   
