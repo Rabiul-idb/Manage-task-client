@@ -37,6 +37,48 @@ This is a **MERN stack task management application** that allows users to **add,
 
 ---
 
+# Manage Task App
+
+A simple task management application built with React and Firebase.
+
+## 🚀 Live Demo  
+[Click here to view the live app](https://manage-task-defd3.web.app/)
+
+## 📌 Features  
+- Add, update, and delete tasks  
+- Drag and drop to reorder tasks  
+- Real-time updates  
+- User authentication  
+
+## 🛠️ Technologies Used  
+- React.js  
+- Firebase  
+- Node.js  
+- Express.js  
+- MongoDB  
+
+
+
+## 📦 Installation  
+
+### **1️⃣ Clone the Repository**
+```sh
+[git clone https://github.com/your-repo/task-manager.git](https://github.com/Rabiul-idb/Manage-task-client.git)
+cd task-manager
+```
+
+### **2️⃣ Install Dependencies**
+```sh
+npm install
+```
+
+### **3️⃣ Run the App**
+```sh
+npm start
+```
+
+
+
 ## 🎯 Future Improvements
 - User authentication (JWT-based login/signup)
 - Task categories and due dates
@@ -51,3 +93,4 @@ Thanks for visiting my app
 
 ## Best Regards
 MD. Rabiul Islam
+
