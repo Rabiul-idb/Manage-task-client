@@ -2,11 +2,15 @@ import axios from "axios";
 
 import Swal from "sweetalert2";
 import TaskList from "./TaskList";
+import { useContext } from "react";
+import { ContextApi } from "./AuthContex";
 
 
 const ToDo = () => {
 
+    const {user} = useContext(ContextApi);
 
+    //console.log(user);
     const addTask = async(e)=>{
         e.preventDefault();
 
@@ -15,11 +19,11 @@ const ToDo = () => {
         const addToDo = {
             task: task,
             time: new Date().toLocaleString(),
-            
-            status: "todo",
+            email: user?.email,
+            createdBy: user?.displayName,
         }
 
-       // console.log(addToDo);
+        //console.log(addToDo);
 
         axios.post(`https://manage-task-server.onrender.com/addTodoTask`, addToDo);
         Swal.fire({

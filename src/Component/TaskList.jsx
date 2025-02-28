@@ -1,9 +1,10 @@
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { io } from "socket.io-client";
+import { ContextApi } from "./AuthContex";
 
 const socket = io("https://manage-task-server.onrender.com/", {
     transports: ["websocket"],
@@ -12,13 +13,14 @@ const socket = io("https://manage-task-server.onrender.com/", {
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
+   const {user} = useContext(ContextApi);
 
   useEffect(() => {
 
 
     const fetchTasks = async () => {
         try {
-          const response = await fetch("https://manage-task-server.onrender.com/allTask"); 
+          const response = await fetch(`https://manage-task-server.onrender.com/allTask`); 
           const data = await response.json();
           setTasks(data); 
         } catch (error) {
@@ -56,7 +58,7 @@ const TaskList = () => {
     return () => {
       socket.off("taskUpdate"); 
     };
-  }, []);
+  }, [user?.email]);
 
   // delete a task
   
@@ -88,6 +90,7 @@ const TaskList = () => {
             </span>
             </div>
         ))}
+      
       
     </div>
   );

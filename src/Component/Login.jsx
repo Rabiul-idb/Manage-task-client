@@ -12,6 +12,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useContext } from "react";
+import { ContextApi } from "./AuthContex";
 
 
 const auth = getAuth(app);
@@ -20,6 +22,8 @@ const Login = () => {
 
   
    const navigate = useNavigate();
+
+   const {setUser} = useContext(ContextApi);
 
 
 const provider = new GoogleAuthProvider();
@@ -33,6 +37,7 @@ const provider = new GoogleAuthProvider();
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    setUser(user);
     // IdP data available using getAdditionalUserInfo(result)
     
          // save to db
