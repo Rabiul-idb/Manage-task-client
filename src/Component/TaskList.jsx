@@ -62,8 +62,8 @@ const TaskList = () => {
   
     const deleteTask = async (id) => {
 
-        
-          await axios.delete(`https://manage-task-server.onrender.com/delete/${id}`);
+        console.log(id)
+          await axios.delete(`https://manage-task-server.onrender.com/deleteTask/${id}`);
       
          
           setTasks(tasks.filter(task => task._id !== id));
@@ -84,7 +84,7 @@ const TaskList = () => {
             {task.task}
             <span className="icons">
                 <FaRegEdit className="cursor-pointer" />
-                <MdDeleteForever onClick={() => deleteTask(task._id)} className="cursor-pointer"/>
+                <MdDeleteForever onClick={() => deleteTask(task._id)} className="cursor-pointer "/>
             </span>
             </div>
         ))}
